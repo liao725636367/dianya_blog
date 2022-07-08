@@ -1,0 +1,34 @@
+server:
+  address:     ":8010"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+logger:
+  level : "all"
+  stdout: true
+
+# 数据库连接配置.
+database:
+  logger:
+    level:   "all"
+    stdout:  true
+    Path: "resource/log/sql"
+  default:
+    link:   "mysql:root:root@tcp(192.168.1.227:30306)/blog"
+    debug:  true
+    charset: "utf8mb4" #数据库编码
+    dryRun: false #空跑
+    maxIdle: 10 #连接池最大闲置的连接数
+    maxOpen: 10 #连接池最大打开的连接数
+    maxLifetime: 30 #(单位秒)连接对象可重复使用的时间长度
+# Redis 配置示例
+redis:
+  # 单实例配置
+  default:
+    address: 192.168.1.227:30602
+    db: 0
+    idleTimeout: 600
+    maxActive: 100
+
+
+

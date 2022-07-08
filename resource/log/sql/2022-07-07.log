@@ -1,0 +1,44 @@
+2022-07-07 17:57:40.806 [ERRO] [  1 ms] [default] [rows:0  ] SHOW TABLES
+Error: dial tcp 192.168.1.227:33306: connect: connection refused 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*DriverMysql).Tables
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/database/gdb/gdb_driver_mysql.go:103
+6.  github.com/gogf/gf-cli/v2/internal/cmd.doGenDaoForArray
+    /home/runner/work/gf-cli/gf-cli/internal/cmd/cmd_gen_dao.go:239
+7.  github.com/gogf/gf-cli/v2/internal/cmd.cGen.Dao
+    /home/runner/work/gf-cli/gf-cli/internal/cmd/cmd_gen_dao.go:173
+8.  reflect.Value.call
+    /opt/hostedtoolcache/go/1.17.6/x64/src/reflect/value.go:556
+9.  reflect.Value.Call
+    /opt/hostedtoolcache/go/1.17.6/x64/src/reflect/value.go:339
+10. github.com/gogf/gf/v2/os/gcmd.newCommandFromMethod.func1
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/os/gcmd/gcmd_command_object.go:296
+11. github.com/gogf/gf/v2/os/gcmd.(*Command).doRun
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/os/gcmd/gcmd_command_run.go:120
+12. github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValueError
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/os/gcmd/gcmd_command_run.go:77
+13. github.com/gogf/gf/v2/os/gcmd.(*Command).RunWithValue
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/os/gcmd/gcmd_command_run.go:32
+14. github.com/gogf/gf/v2/os/gcmd.(*Command).Run
+    /home/runner/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220124023219-43f1354e7983/os/gcmd/gcmd_command_run.go:26
+15. main.main
+    /home/runner/work/gf-cli/gf-cli/gf/main.go:54
+16. runtime.main
+    /opt/hostedtoolcache/go/1.17.6/x64/src/runtime/proc.go:255
+17. runtime.goexit
+    /opt/hostedtoolcache/go/1.17.6/x64/src/runtime/asm_amd64.s:1581
+ 
+2022-07-07 17:57:52.954 [DEBU] [  9 ms] [default] [rows:5  ] SHOW TABLES 
+2022-07-07 17:57:52.965 [DEBU] {8801bc1a9783ff16561c2524ec99e513} [ 10 ms] [default] [rows:9  ] SHOW FULL COLUMNS FROM `blog_article` 
+2022-07-07 17:57:53.018 [DEBU] {8801bc1a9783ff16561c2524ec99e513} [ 10 ms] [default] [rows:2  ] SHOW FULL COLUMNS FROM `blog_category` 
+2022-07-07 17:57:53.078 [DEBU] {8801bc1a9783ff16561c2524ec99e513} [  9 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `blog_comment` 
+2022-07-07 17:57:53.104 [DEBU] {8801bc1a9783ff16561c2524ec99e513} [ 11 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `blog_user` 
+2022-07-07 17:57:53.147 [DEBU] {8801bc1a9783ff16561c2524ec99e513} [ 10 ms] [default] [rows:4  ] SHOW FULL COLUMNS FROM `blog_website` 

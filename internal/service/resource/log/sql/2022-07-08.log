@@ -1,0 +1,137 @@
+2022-07-08 14:42:42.324 [ERRO] [  7 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '' in  NATURAL LANGUAGE MODE) LIMIT 10 skip 0;
+Error: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'skip 0' at line 1 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*Core).GetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:147
+6.  blog/internal/service.(*sArticle).List
+    /Users/liao/go/blog/internal/service/article.go:46
+7.  blog/internal/service.TestSArticle_List
+    /Users/liao/go/blog/internal/service/article_test.go:11
+ 
+2022-07-08 14:44:45.723 [ERRO] [  8 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 skip 0;
+Error: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'skip 0' at line 1 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*Core).GetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:147
+6.  blog/internal/service.(*sArticle).List
+    /Users/liao/go/blog/internal/service/article.go:50
+7.  blog/internal/service.TestSArticle_List
+    /Users/liao/go/blog/internal/service/article_test.go:11
+ 
+2022-07-08 14:45:27.378 [ERRO] [ 12 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) skip 0 LIMIT 10 
+Error: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'skip 0 LIMIT 10' at line 1 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*Core).GetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:147
+6.  blog/internal/service.(*sArticle).List
+    /Users/liao/go/blog/internal/service/article.go:50
+7.  blog/internal/service.TestSArticle_List
+    /Users/liao/go/blog/internal/service/article_test.go:11
+ 
+2022-07-08 14:47:08.645 [ERRO] [  4 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 skip 0
+Error: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'skip 0' at line 1 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*Core).GetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:147
+6.  blog/internal/service.(*sArticle).List
+    /Users/liao/go/blog/internal/service/article.go:50
+7.  blog/internal/service.TestSArticle_List
+    /Users/liao/go/blog/internal/service/article_test.go:11
+ 
+2022-07-08 14:47:16.064 [DEBU] [ 15 ms] [default] [rows:1  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 0 
+2022-07-08 14:47:45.255 [DEBU] [  9 ms] [default] [rows:1  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 0 
+2022-07-08 14:48:05.229 [DEBU] [ 13 ms] [default] [rows:1  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 0 
+2022-07-08 14:48:14.011 [DEBU] [ 11 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 100 
+2022-07-08 14:49:20.816 [DEBU] [ 11 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 100 
+2022-07-08 14:49:34.380 [DEBU] [ 12 ms] [default] [rows:0  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 100 
+2022-07-08 14:49:48.018 [DEBU] [ 11 ms] [default] [rows:1  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 0 
+2022-07-08 14:55:20.584 [DEBU] [ 11 ms] [default] [rows:1  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 0 
+2022-07-08 14:55:20.594 [DEBU] [  9 ms] [default] [rows:2  ] SHOW FULL COLUMNS FROM `blog_category` 
+2022-07-08 14:55:20.601 [DEBU] [  6 ms] [default] [rows:0  ] SELECT `id`,`name` FROM `blog_category` 
+2022-07-08 14:57:12.519 [DEBU] [ 11 ms] [default] [rows:1  ] SELECT * from blog_article where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE) LIMIT 10 offset 0 
+2022-07-08 14:57:12.531 [DEBU] [  8 ms] [default] [rows:2  ] SHOW FULL COLUMNS FROM `blog_category` 
+2022-07-08 14:57:12.539 [DEBU] [  8 ms] [default] [rows:2  ] SELECT `id`,`name` FROM `blog_category` 
+2022-07-08 18:22:30.044 [ERRO] [  9 ms] [default] [rows:0  ] SELECT COUNT(*) from blog_article  where against( '美国' in  NATURAL LANGUAGE MODE) match(title,content)  
+Error: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( ? in  NATURAL LANGUAGE MODE) match(title,content)' at line 1 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*Core).GetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:147
+6.  github.com/gogf/gf/v2/database/gdb.(*Core).GetOne
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:157
+7.  github.com/gogf/gf/v2/database/gdb.(*Core).GetValue
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:230
+8.  github.com/gogf/gf/v2/database/gdb.(*Core).GetCount
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:247
+9.  blog/internal/service.(*sArticle).List
+    /Users/liao/go/blog/internal/service/article.go:136
+10. blog/internal/service.TestSArticle_List
+    /Users/liao/go/blog/internal/service/article_test.go:12
+ 
+2022-07-08 18:22:58.416 [ERRO] [  6 ms] [default] [rows:0  ] SELECT COUNT(*) from blog_article  where against( '美国' in  NATURAL LANGUAGE MODE) match(title,content)  
+Error: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( ? in  NATURAL LANGUAGE MODE) match(title,content)' at line 1 
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:655
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:238
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core_underlying.go:59
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoGetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:152
+5.  github.com/gogf/gf/v2/database/gdb.(*Core).GetAll
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:147
+6.  github.com/gogf/gf/v2/database/gdb.(*Core).GetOne
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:157
+7.  github.com/gogf/gf/v2/database/gdb.(*Core).GetValue
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:230
+8.  github.com/gogf/gf/v2/database/gdb.(*Core).GetCount
+    /Users/liao/go/pkg/mod/github.com/gogf/gf/v2@v2.0.0-rc.0.20220117131058-9345eb5e946f/database/gdb/gdb_core.go:247
+9.  blog/internal/service.(*sArticle).List
+    /Users/liao/go/blog/internal/service/article.go:136
+10. blog/internal/service.TestSArticle_List
+    /Users/liao/go/blog/internal/service/article_test.go:12
+ 
+2022-07-08 18:23:38.794 [DEBU] [  8 ms] [default] [rows:1  ] SELECT COUNT(*) from blog_article  where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE)    
+2022-07-08 18:23:38.803 [DEBU] [  9 ms] [default] [rows:1  ] SELECT id,author,cover,title,summary,`read`,support,category_id,created_at,updated_at from blog_article    where match(title,content) against( '美国' in  NATURAL LANGUAGE MODE)   LIMIT 10 offset 0 
+2022-07-08 18:23:38.811 [DEBU] [  8 ms] [default] [rows:2  ] SHOW FULL COLUMNS FROM `blog_category` 
+2022-07-08 18:23:38.819 [DEBU] [  7 ms] [default] [rows:2  ] SELECT `id`,`name` FROM `blog_category` 
